@@ -1,35 +1,61 @@
-function Skills() {
-    return (
-        <section id="skills">
-            <h1 className="text-[#516264] text-xl text-center mb-5">Main Skills</h1>
-            <div className="grid items-center grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5 3xl:grid-cols-5">
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/javascript.png" className="w-20 mb-5"></img>
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/react.webp" className="w-20 mb-5"></img>
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/php.png" className="w-20 mb-5"></img>
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/python.webp" className="w-20 mb-5"></img>
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/java.png" className="w-20 mb-5"></img>  
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/bootstrap.png" className="w-20 mb-5"></img>  
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/git.png" className="w-20 mb-5"></img>  
-                </div>
-                <div className="border-b-4 border-dashed m-10">
-                    <img src="/tailwind.svg" className="w-20 mb-5"></img>  
-                </div>  
-            </div>
-        </section>
-    )
-}
+import Marquee from "react-fast-marquee";
 
-export default Skills
+export const Skills = () => {
+    const skills = [
+        {
+            image: "/javascript.png",
+            alt: "JavaScript",
+        },
+        {
+            image: "typescript.png",
+            alt: "TypeScript",
+        },
+        {
+            image: "/react.webp",
+            alt: "React",
+        },
+        {
+            image: "/python.webp",
+            alt: "Python",
+        },
+        {
+            image: "/mysql.png",
+            alt: "MySQL",
+        },
+        {
+            image: "/tailwind.svg",
+            alt: "Tailwind CSS",
+        },
+    ];
+
+    return (
+        <section id="skills" className="w-full">
+            <h1 className="text-[#516264] text-xl text-center mb-5">Main Skills</h1>
+            <Marquee autoFill pauseOnClick>
+                <div className="flex flex-wrap mb-10">
+                {skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="flex flex-row m-2 justify-center items-center"
+                        style={{
+                            borderRadius: "10px",
+                            background: "#d3d3d3",
+                        }}
+                    >
+                    <div className="flex flex-col justify-center items-center text-center rounded-lg p-4 w-48 h-36 sm:w-48 sm:h-36 md:w-48 md:h-36 lg:w-48 lg:h-36 xl:w-48 xl:h-36">
+                        <img
+                            src={skill.image}
+                            alt={skill.alt}
+                            className="mb-4 w-20 h-20 object-contain"
+                        />
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-600">{skill.alt}</h3>
+                    </div>
+                    </div>
+                ))}
+                </div>
+            </Marquee>
+        </section>
+    );
+};
+
+export default Skills;

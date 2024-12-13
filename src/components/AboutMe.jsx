@@ -2,14 +2,25 @@ function AboutMe() {
     return (
         <section>
             <div className="flex items-center">
-                <img className="w-5 h-5 mr-3" src="/user.png"></img>
                 <h1 className="text-[#516264] text-xl">About Me</h1>
             </div>
+            <p className="text-[#c7dbde] mb-6">
+                I am a passionate Software Developer with a strong dedication to learning and overcoming challenges, both personally and professionally. My career is marked by extensive academic activities, including individual and group-based projects, where I constantly strive to excel and deepen my understanding of technology.
+            </p>
+            <p className="text-[#c7dbde] mb-6">
+                Currently, I specialize in mobile development focused on digital banking solutions and also work on creating landing pages at GBX Brasil. My role involves designing, developing, and refining applications that provide seamless user experiences, as well as contributing to the innovation of financial technology.
+            </p>
+            <p className="text-[#c7dbde] mb-6">
+                With experience in building websites, configuring, and testing applications, I bring a versatile skill set to my work. I believe in fostering open communication and building strong professional relationships with colleagues, as these are key to achieving shared goals.
+            </p>
+            <p className="text-[#c7dbde] mb-6">
+                My commitment to lifelong learning in the ever-evolving field of technology drives me to stay updated on industry trends and best practices. My goal is to continue delivering high-quality solutions that meet users' needs and contribute to the success of my team and company.
+            </p>
             <p className="text-[#c7dbde]">
-                Hello, my name is Gustavo Müller, and I am a Software Developer. I have extensive academic activities, both individual and group-based. I am very dedicated to studying the field and completing challenges, whether they are personal or work-related. My experience includes developing websites, configuring, and testing applications in my current role at GBX Brasil. I value good communication, strong relationships with colleagues, total dedication to achieving my goals, and a lifelong commitment to studying technology.
+                I value dedication, collaboration, and innovation, and I am always ready to embrace new challenges that push the boundaries of what technology can achieve.
             </p>
         </section>
-    )
+    );
 }
 
-export default AboutMe
+export default AboutMe;
