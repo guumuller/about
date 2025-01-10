@@ -22,7 +22,7 @@
   command = "yarn build"
 
   # Variáveis de ambiente para produção
-  environment = { NODE_VERSION = "20.0.0" }
+  environment = { NODE_VERSION = "20.0.0"  }
 
 # Configurações de contexto para deploy previews
 [context.deploy-preview]
