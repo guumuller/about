@@ -28,7 +28,7 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
       <p>
         I've been developing software for{" "}
-        {timeElapsed.years} years, {timeElapsed.days} days,
+        {timeElapsed.years} years and {timeElapsed.days} days.
       </p>
     </footer>
   );
