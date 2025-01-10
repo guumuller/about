@@ -1,0 +1,41 @@
+# Configurações principais de build
+[build]
+  # Diretório onde os arquivos de build serão publicados
+  publish = "dist"
+
+  # Comando para construir o projeto
+  command = "yarn build"
+
+  # Variáveis de ambiente
+  environment = { NODE_VERSION = "20.0.0" }
+
+# Configuração de redirecionamento para SPA
+[[redirects]]
+  # Redireciona todas as rotas para index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configurações de contexto para produção
+[context.production]
+  # Comando de build específico para produção
+  command = "yarn build"
+
+  # Variáveis de ambiente para produção
+  environment = { NODE_VERSION = "20.0.0" }
+
+# Configurações de contexto para deploy previews
+[context.deploy-preview]
+  # Comando de build para deploy previews
+  command = "yarn build"
+
+  # Variáveis de ambiente para deploy previews
+  environment = { NODE_VERSION = "20.0.0" }
+
+# Configurações de contexto para branch deploys
+[context.branch-deploy]
+  # Comando de build para branch deploys
+  command = "yarn build"
+
+  # Variáveis de ambiente para branch deploys
+  environment = { NODE_VERSION = "20.0.0" }
