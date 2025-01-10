@@ -19,7 +19,6 @@ const About = () => (
       className="max-w-4xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-xl p-8"
     >
       <div className="flex flex-col gap-10">
-        {/* Sessão 1 */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -32,7 +31,6 @@ const About = () => (
           </p>
         </motion.div>
 
-        {/* Sessão 2 */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -45,7 +43,6 @@ const About = () => (
           </p>
         </motion.div>
 
-        {/* Sessão 3 */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -58,7 +55,6 @@ const About = () => (
           </p>
         </motion.div>
 
-        {/* Sessão Educação */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -69,7 +65,6 @@ const About = () => (
             Education
           </h3>
           <div className="flex flex-col gap-10">
-            {/* Educação 1 */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -82,7 +77,6 @@ const About = () => (
               </p>
             </motion.div>
 
-            {/* Educação 2 */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
