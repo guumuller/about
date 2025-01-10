@@ -9,11 +9,8 @@ const Footer = () => {
     
     const years = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));
     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) % 365;
-    const hours = Math.floor(timeDiff / (1000 * 60 * 60)) % 24;
-    const minutes = Math.floor(timeDiff / (1000 * 60)) % 60;
-    const seconds = Math.floor(timeDiff / 1000) % 60;
 
-    return { years, days, hours, minutes, seconds };
+    return { years, days };
   };
 
   const [timeElapsed, setTimeElapsed] = useState(calculateTimeElapsed());
@@ -31,8 +28,7 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
       <p>
         I've been developing software for{" "}
-        {timeElapsed.years} years, {timeElapsed.days} days, {timeElapsed.hours} hours,{" "}
-        {timeElapsed.minutes} minutes, and {timeElapsed.seconds} seconds.
+        {timeElapsed.years} years, {timeElapsed.days} days,
       </p>
     </footer>
   );
